@@ -1,26 +1,29 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* FORCING COLORS MANUALLY */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #F9F7F2 !important; /* Muted Cream */
+  color: #2B2D42 !important;           /* Soft Charcoal */
+  margin: 0;
+  padding: 0;
+}
+
+/* Fix the bunched-up navigation */
+nav {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 2rem !important;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+/* Style the links so they aren't blue */
+a {
+  color: #8E9AAF !important;
+  text-decoration: none !important;
+  margin-left: 2rem;
+  font-family: monospace;
 }
