@@ -275,47 +275,90 @@ export default function Home() {
           </div>
         </div>
       </section>
-{/* --- SECTION 5: CONTACT --- */}
-      <section id="contact" style={{ 
-        height: '100vh', width: '100%', display: 'flex', flexDirection: 'column', 
-        justifyContent: 'center', alignItems: 'center', scrollSnapAlign: 'start', textAlign: 'center',
-        padding: '0 2rem'
-      }}>
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          style={{ maxWidth: '600px' }}
-        >
-          <h3 style={{ fontSize: 'clamp(2.5rem, 8vw, 4rem)', fontWeight: '900', marginBottom: '1.5rem' }}>Ready to Innovate?</h3>
-          <p style={{ color: '#94A3B8', fontSize: '1.2rem', marginBottom: '3rem', lineHeight: '1.6' }}>
-            Looking for AI/ML opportunities and collaborations. Let's transform your data into intelligent solutions.
-          </p>
-          
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', alignItems: 'center' }}>
-            {/* Main WhatsApp Contact Card with Icon */}
-            <a 
-              href="https://wa.me/923226375679" 
-              target="_blank" 
-              style={{ 
-                display: 'flex', alignItems: 'center', gap: '12px', background: 'rgba(34, 197, 94, 0.1)', 
-                padding: '1rem 2.5rem', borderRadius: '16px', border: '1px solid #22C55E', 
-                color: '#22C55E', textDecoration: 'none', fontWeight: 'bold', fontSize: '1.1rem' 
-              }}
-            >
-              {/* WhatsApp SVG Icon for professional look */}
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72.937 3.659 1.432 5.705 1.433h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-              </svg>
-              <span>WhatsApp: 0322 6375679</span>
-            </a>
+<section id="contact" style={{ 
+  minHeight: '100vh', 
+  width: '100%', 
+  display: 'flex', 
+  flexDirection: 'column', 
+  justifyContent: 'center', 
+  alignItems: 'center', 
+  scrollSnapAlign: 'start', 
+  textAlign: 'center',
+  padding: '6rem 1.5rem', // Increased side padding for mobile
+  boxSizing: 'border-box' // Ensures padding doesn't add to width
+}}>
+  <motion.div 
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    style={{ width: '100%', maxWidth: '600px' }} // Ensures it stays within phone width
+  >
+    <h3 style={{ 
+      fontSize: 'clamp(2.2rem, 10vw, 4rem)', // Slightly smaller minimum for mobile
+      fontWeight: '900', 
+      marginBottom: '1.5rem',
+      lineHeight: '1.1'
+    }}>
+      Ready to Innovate?
+    </h3>
+    <p style={{ 
+      color: '#94A3B8', 
+      fontSize: 'clamp(1rem, 4vw, 1.2rem)', 
+      marginBottom: '3rem', 
+      lineHeight: '1.6',
+      padding: '0 10px'
+    }}>
+      Looking for AI/ML opportunities and collaborations. Let's transform your data into intelligent solutions.
+    </p>
+    
+    <div style={{ 
+      display: 'flex', 
+      flexDirection: 'column', 
+      gap: '1.5rem', 
+      alignItems: 'center',
+      width: '100%' 
+    }}>
+      {/* Main WhatsApp Contact Card */}
+      <a 
+        href="https://wa.me/923226375679" 
+        target="_blank" 
+        style={{ 
+          display: 'flex', 
+          alignItems: 'center', 
+          justifyContent: 'center',
+          gap: '12px', 
+          background: 'rgba(34, 197, 94, 0.1)', 
+          padding: '1rem 1.5rem', // Adjusted padding for mobile
+          borderRadius: '16px', 
+          border: '1px solid #22C55E', 
+          color: '#22C55E', 
+          textDecoration: 'none', 
+          fontWeight: 'bold', 
+          fontSize: '1rem',
+          width: 'fit-content',
+          maxWidth: '90%' // Keeps button inside screen
+        }}
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style={{ flexShrink: 0 }}>
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72.937 3.659 1.432 5.705 1.433h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        <span style={{ whiteSpace: 'nowrap' }}>WhatsApp: 0322 6375679</span>
+      </a>
 
-            <a href="https://www.linkedin.com/in/arisha-manzoor-14b494311/" target="_blank" style={{ color: '#6366F1', fontSize: '1.2rem', textDecoration: 'none', fontWeight: 'bold', borderBottom: '2px solid #6366F1', paddingBottom: '5px' }}>
-              Connect on LinkedIn →
-            </a>
-          </div>
-        </motion.div>
-      </section>
-
+      <a href="https://www.linkedin.com/in/arisha-manzoor-14b494311/" 
+         target="_blank" 
+         style={{ 
+           color: '#6366F1', 
+           fontSize: '1.1rem', 
+           textDecoration: 'none', 
+           fontWeight: 'bold', 
+           borderBottom: '2px solid #6366F1', 
+           paddingBottom: '5px' 
+         }}>
+        Connect on LinkedIn →
+      </a>
+    </div>
+  </motion.div>
+</section>
      {/* --- FLOATING WHATSAPP BUTTON --- */}
       <motion.a
         href="https://wa.me/923226375679"

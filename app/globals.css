@@ -2,28 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
-/* FORCING COLORS MANUALLY */
+:root {
+  --background: #0B0F1A;
+  --foreground: #FFFFFF;
+}
+
 body {
-  background-color: #F9F7F2 !important; /* Muted Cream */
-  color: #2B2D42 !important;           /* Soft Charcoal */
+  background-color: var(--background);
+  color: var(--foreground);
   margin: 0;
   padding: 0;
+  overflow-x: hidden; /* Critical for mobile */
+  width: 100%;
 }
 
-/* Fix the bunched-up navigation */
+/* Base Nav Styles */
 nav {
-  display: flex !important;
-  justify-content: space-between !important;
-  align-items: center !important;
-  padding: 2rem !important;
-  max-width: 1024px;
-  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-/* Style the links so they aren't blue */
+/* Unified Mobile Fixes */
+@media (max-width: 768px) {
+  nav {
+    padding: 1rem !important;
+  }
+  
+  /* Make navbar links wrap so they stay on screen */
+  nav div {
+    gap: 0.8rem !important;
+    font-size: 0.85rem !important;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Hide the extra LinkedIn button in the nav on mobile to save space */
+  .linkedin-nav-btn {
+    display: none !important;
+  }
+
+  /* Shrink text so it doesn't overlap or push the screen wide */
+  h1, h2, h3 {
+    font-size: 2.2rem !important;
+    line-height: 1.2 !important;
+    word-break: break-word;
+  }
+
+  section {
+    padding: 4rem 1.5rem !important; /* Better vertical spacing */
+  }
+
+  p {
+    font-size: 1rem !important;
+  }
+}
+
 a {
-  color: #8E9AAF !important;
-  text-decoration: none !important;
-  margin-left: 2rem;
-  font-family: monospace;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+a:hover {
+  opacity: 0.8;
 }
